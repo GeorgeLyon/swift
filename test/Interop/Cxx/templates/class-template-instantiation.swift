@@ -18,6 +18,10 @@ TemplatesTestSuite.test("with-swift-type") {
   expectEqual(wrappedMagicNumber.getValuePlusArg(8), 21)
 }
 
+TemplatesTestSuite.test("with-static-c++-type") {
+  expectEqual(MagicWrapper<IntWrapper>.getStaticValuePlusArg(8), 50)
+}
+
 TemplatesTestSuite.test("with-c++-type-calling-method-on-arg")
   .skip(.watchOSSimulatorAny("rdar://problem/87262809")).code {
   let i1 = IntWrapper(value: 42)

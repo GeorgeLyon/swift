@@ -5,6 +5,7 @@ template<class T>
 struct MagicWrapper {
   T t;
   int getValuePlusArg(int arg) const { return t.getValue() + arg; }
+  static int getStaticValuePlusArg(int arg) { return 42 + arg; }
 };
 
 struct IntWrapper {
